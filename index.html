@@ -11,43 +11,54 @@
 
 <body>
     <header> <!-- Inicio Header -->
-        <nav>
-            <picture>
+        <nav class="navbar container">
+            <picture class="navbar__logo">
                 <a href="./index.html">
                     <img src="./img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
                 </a>
             </picture>
-            <ul>
-                <li>
-                    <a href="./pages/shop.html">SHOP</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item with-submenu">
+                    <a class="navbar__link with-icon" href="./pages/shop/shop.html">SHOP<iconify-icon icon="ion:chevron-down"></iconify-icon></a>
+                    <ul class="submenu">
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Funkos</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Remeras</a>
+                        </li>
+                        <li class="submenu__item">
+                            <a href="" class="submenu__link">Llaveros</a>
+                        </li>
+                    </ul>
                 </li>
-                <li>
-                    <a href="./pages/contact.html">CONTACTO</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/contact.html">CONTACTO</a>
                 </li>
-                <li>
-                    <a href="./pages/login.html">LOGIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./pages/admin/login.html">LOGIN</a>
                 </li>
-                <li>
-                    <a href="./pages/carrito.html">
+                <li class="navbar__item">
+                    <a class="navbar__cart" href="./pages/carrito.html">
                         <img src="./img/icons/cart-icon.svg" alt="icono de carrito">
                     </a>
                 </li>
             </ul>
         </nav>
     </header> <!--   Fin Header -->
-    <main class="container"> <!-- Inicio Main -->
+    <main> <!-- Inicio Main -->
         <section> <!-- Inicio Banner -->
             <article>
                 <h3>Nuevos Ingresos</h3>
                 <p>Descubrí el próximo Funko Pop de tu colección</p>
-                <a href="./pages/shop.html">SHOP</a>
+                <a href="./pages/shop/shop.html">SHOP</a>
             </article>
         </section> <!-- Fin Banner -->
         <section> <!-- Inicio Colecciones -->
             <article>
                 <h3>Star Wars & The Mandalorian</h3>
                 <p>Disfruta de una saga que sigue agregando personajes a su colección.</p>
-                <a href="./pages/shop.html">VER COLECCIÓN</a>
+                <a href="./pages/shop/shop.html">VER COLECCIÓN</a>
             </article>
             <picture>
                 <img src="./img/star-wars/baby-yoda-1.webp"
@@ -58,7 +69,7 @@
             <article>
                 <h3>POKEMON INDIGO</h3>
                 <p>Atrapa todos los que puedas y disfruta de una colección llena de amigos.</p>
-                <a href="./pages/shop.html">VER COLECCIÓN</a>
+                <a href="./pages/shop/shop.html">VER COLECCIÓN</a>
             </article>
             <picture>
                 <img src="./img/pokemon/vulpix-1.webp" alt="Figura coleccionable Funko de Vulpix de la serie Pokemon">
@@ -68,7 +79,7 @@
             <article>
                 <h3>HARRY POTTER</h3>
                 <p>Revive los recuerdos de una saga llena de magia y encanto.</p>
-                <a href="./pages/shop.html">VER COLECCIÓN</a>
+                <a href="./pages/shop/shop.html">VER COLECCIÓN</a>
             </article>
             <picture>
                 <img src="./img/harry-potter/snape-patronus-1.webp"
@@ -133,13 +144,13 @@
             <nav>
                 <ul>
                     <li>
-                        <a href="./pages/shop.html">SHOP</a>
+                        <a href="./pages/shop/shop.html">SHOP</a>
                     </li>
                     <li>
                         <a href="./pages/register.html">REGISTRARSE</a>
                     </li>
                     <li>
-                        <a href="./pages/login.html">INGRESAR</a>
+                        <a href="./pages/admin/login.html">INGRESAR</a>
                     </li>
                     <li>
                         <a href="./pages/contact.html">CONTACTO</a>
@@ -154,6 +165,7 @@
         </section>
         <p>All rights reserved 2023 - Funkoshop &copy;</p>
     </footer> <!-- Fin Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
 </body>
 
 </html>
