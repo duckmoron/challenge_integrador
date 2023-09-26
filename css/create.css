@@ -1,0 +1,9 @@
+/****** CREATE.HTML - CSS *********/
+
+/* SECTION FOOTER IMG */
+
+.img_footer {
+    display: flex;
+    justify-content: end;
+    position: relative;
+}

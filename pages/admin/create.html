@@ -6,26 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/index.css">
+    <link rel="stylesheet" href="../../css/create.css">
     <title>Create | Funkoshop</title>
 </head>
 
 <body>
     <header> <!-- Inicio Header -->
-        <nav>
-            <picture>
+        <nav class="navbar container">
+            <picture class="navbar__logo">
                 <a href="../../index.html">
                     <img src="../../img/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca Funkoshop">
                 </a>
             </picture>
-            <ul>
-                <li>
-                    <a href="../../index.html">VER TIENDA</a>
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../../index.html">VER TIENDA</a>
                 </li>
-                <li>
-                    <a href="./admin.html">ADMIN</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="./admin.html">ADMIN</a>
                 </li>
-                <li>
-                    <a href="../../index.html">SALIR</a>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="../../index.html">SALIR</a>
                 </li>
             </ul>
         </nav>
@@ -72,31 +73,31 @@
         <button type="submit" form="form-crear-item" value="Submit">Agregar Producto</button>
         <button type="reset" form="form-crear-item">Limpiar</button>
     </main> <!-- Fin Main -->
-    <footer> <!-- Inicio Footer -->
+    <footer class="footer"> <!-- Inicio Footer -->
         <section>
-            <nav>
-                <ul>
-                    <li>
-                        <a href="../shop/shop.html">SHOP</a>
+            <nav class="navbar container">
+                <ul class="navbar__item">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../shop/shop.html">SHOP</a>
                     </li>
-                    <li>
-                        <a href="./register.html">REGISTRARSE</a>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="./register.html">REGISTRARSE</a>
                     </li>
-                    <li>
-                        <a href="./login.html">INGRESAR</a>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="./login.html">INGRESAR</a>
                     </li>
-                    <li>
-                        <a href="../contact.html">CONTACTO</a>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="../contact.html">CONTACTO</a>
                     </li>
                 </ul>
             </nav>
-            <picture>
+            <picture class="img_footer">
                 <a href="../../index.html">
                     <img src="../../img/branding/isotype.svg" alt="Isotipo de la marca Funkoshop">
                 </a>
             </picture>
         </section>
-        <p>All rights reserved 2023 - Funkoshop &copy;</p>
+        <p class="footer__copy">All rights reserved 2023 - Funkoshop &copy;</p>
     </footer> <!-- Fin Footer -->
 </body>
 </html>
