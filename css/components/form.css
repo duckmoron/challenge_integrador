@@ -47,6 +47,11 @@
     width: 50px;
 }
 
+.checkbox {
+    height: var(--spacing-16);
+    width: var(--spacing-16);
+}
+
 ::-webkit-input-placeholder { /* Edge */
     color: var(--dark-300);
 }
@@ -58,3 +63,4 @@
 ::placeholder{
     color: var(--dark-300);
 }
+

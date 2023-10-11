@@ -1,10 +1,10 @@
 const add = document.querySelector('#add');
 const subtract = document.querySelector('#subtract');
-const quantify = document.querySelector('#quantify');
+const quantify = document.querySelector('#quantity');
 
-add.addEventListener('click', () => quantify.value = Number(quantify.value) + 1);
+add.addEventListener('click', () => quantity.value = Number(quantity.value) + 1);
 subtract.addEventListener('click', () => {
-    if( quantify.value > 0){
-        quantify.value = Number(quantify.value) - 1;
+    if( quantity.value > 0){
+        quantity.value = Number(quantity.value) - 1;
     }
 });
