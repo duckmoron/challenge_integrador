@@ -1,3 +1,10 @@
+.form__title{
+    font-family: var(--alternative-font);
+    font-size: var(--font-display);
+    font-weight: 700;
+    margin: var(--spacing-36) 0;
+}
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -11,7 +18,7 @@
     margin-bottom: var(--spacing-8);
 }
 
-.form-group > input, .form-group > select{
+.form-group > input, .form-group > select, .form-group > textarea {
     border-radius: 6px;
     border: 2px solid var(--dark-solid);
     padding: var(--spacing-8);
