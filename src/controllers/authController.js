@@ -3,14 +3,21 @@ const crypt = require('bcryptjs');
 
 const authControllers = {
     loginView: async (req, res) => {
-        //res.send('Route for Login GET'),
         res.render('auth/login', {
             view: {
                 title: "Login | Funkoshop"
             }
         })
     },
-    loginPostView: (req, res) => res.send('Route for Login POST'),
+    loginPostView: async (req, res) => {
+        const {email} = req.body
+        const [valido] = await userModel.login(email);
+        if(valido === undefined){
+			res.redirect('/')
+        } else {
+			res.redirect(`/admin?user=${valido.user_id}`);
+		}
+    },
     registerView: async (req, res) => {
         res.render('auth/register', {
             view: {
@@ -19,15 +26,9 @@ const authControllers = {
         })
     },
     registerPostView: async (req, res) =>  {
-        const creado = await userModel.crearUsuario(req.body.nombre, req.body.apellido, req.body.email, req.body.hash)
+        const creado = await userModel.crearUsuario(req.body.login_nombre, req.body.login_apellido, req.body.login_email, req.body.login_pass)
         res.redirect('/')
-    },
-    login: async (req, res) => {
-        const { email, password } = req.body;
-        const usuario = await userModel.getUserByEmail(email);
-
-    },
-    
+    },    
     logoutView: (req, res) => res.send('Route for Logout')
 }
 
