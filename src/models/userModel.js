@@ -5,7 +5,7 @@ const crearUsuario = async (nombre, apellido, email, password) => {
 	const hash = await crypt.hash(password, 4)
 	console.log(hash);
 	try {
-		const [creado] = await conn.query(`INSERT INTO funko_test.user (name, lastname, email, password)
+		const [creado] = await conn.query(`INSERT INTO sql10627826.user (name, lastname, email, password)
 			VALUES ("${nombre}", "${apellido}", "${email}", "${hash}");`)
 		return creado
 	} catch (error) {
@@ -17,7 +17,7 @@ const crearUsuario = async (nombre, apellido, email, password) => {
 
 const login = async (email) => {
 	try {	
-		const [user] = await conn.query(`SELECT * FROM funko_test.user 
+		const [user] = await conn.query(`SELECT * FROM sql10627826.user 
         WHERE email = "${email}";`)
 		return user
 	} catch (error) {
