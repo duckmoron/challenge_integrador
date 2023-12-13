@@ -3,13 +3,15 @@ const ItemModel = require('../models/itemModel.js')
 const mainControllers = {
     homeView: async (req, res) => {
         const items = await ItemModel.getAll(5);
-        const collactions = await ItemModel.getCollection();
+        // const collactions = await ItemModel.getCollection();
+        const prodHome = await ItemModel.getItemLicence();
         res.render('home', {
             view: {
                 title: "Home | Funkoshop"
             },
             items: items,
-            collactions: collactions
+            prodHome: prodHome
+            //collactions: collactions
         });
     },
     contactView: async (req, res) => {
