@@ -1,6 +1,7 @@
 const express = require('express'); /*Requiero express para mi proyecto*/
 const app = express(); /*levanto express y ya puedo utilizarlo*/
 
+
 /*Import de las rutas*/
 const mainRoutes = require ('./src/routes/mainRoutes.js'); //creo la varible para llamarla desde la carpeta
 const shopRoutes = require ('./src/routes/shopRoutes.js');
