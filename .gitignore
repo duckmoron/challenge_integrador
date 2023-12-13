@@ -1,2 +1,4 @@
+.vscode
 .env
+localhost.env
 node_modules
