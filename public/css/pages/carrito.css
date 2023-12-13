@@ -1,73 +1,277 @@
 .carrito {
+    padding: 6rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
-    /* valor a modificar */
 }
 
 .carrito__titulo {
+    align-self: flex-start;
+    display: inline-block;
+    font-family: var(--alternative-font);
     font-size: 46px;
+    font-weight: 700;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: left;
+    border-bottom: solid 5px var(--primary-solid);
+    padding: 0px 0px 8px 0px;
+    color: rgba(17, 17, 17, 1);
 }
 
-.carrito-info {
+.carrito__lista {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.carrito__info {
+    height: 51px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.carrito__info p {
+    font-family: var(--base-font);
     font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
 }
 
 .carrito__producto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    border-radius: 25px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 16px;
+}
+
+.carrito__producto__info {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    place-self: start;
+    gap: 18px;
+}
+
+.carrito__producto__img {
+    width: 118px;
+}
+
+.carrito__producto__texto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.carrito__producto__texto div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .carrito__producto__nombre {
+    font-family: var(--base-font);
     font-size: 24px;
     font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(17, 17, 17, 1);
 }
 
 .carrito__producto__franquicia {
-    color: #30343F;
+    font-family: var(--base-font);
     font-size: 14px;
     font-weight: 500;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(48, 52, 63, 1);
 }
 
 .carrito__producto__precio {
-    color: #333333;
+    font-family: var(--base-font);
     font-size: 14px;
     font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(51, 51, 51, 1);
 }
 
-/* .btn {
-    background: #F24E1E;
-    color: #FFFFFF;
+.carrito__producto__cantidad {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 8px;
+}
+
+.carrito__producto__cantidad .carrito__producto__cantidad__numero {
+    grid-row: 1/-1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid rgba(201, 201, 201, 1)
+}
+
+.carrito__producto__cantidad div span {
+    font-family: var(--base-font);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+.carrito__producto__cantidad__botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px 0;
+    gap: 6px;
+}
+
+.carrito__producto__cantidad button {
+    border: none;
+    color: white;
+    background-color: var(--primary-solid);
     width: 18px;
     height: 16px;
-    padding: 4px;
-    border: none
-} */
+}
 
-/* RESUMEN */
+.carrito__producto__total {
+    font-family: var(--base-font);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.carrito__producto__eliminar {
+    width: 28px;
+    height: 28px;
+    color: var(--primary-solid);
+    font-weight: 400;
+    font-size: 2.4rem;
+    border: 2px solid var(--primary-solid);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    justify-self: flex-end;
+}
+
+.carrito__resumen {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    gap: 10px;
+}
 
 .carrito__resumen__titulo {
+    font-family: var(--alternative-font);
+    font-weight: 700;
+    font-size: 2.875rem;
+    border-bottom: solid 3px var(--primary-solid);
+    gap: 10px;
+    font-family: var(--alternative-font);
     font-size: 46px;
+    font-weight: 700;
+    line-height: 54px;
+    letter-spacing: 0em;
+    padding: 0px 0px 8px 0px;
+    border: 0px 0px 5px 0px;
+    align-self: flex-end;
 }
 
-.carrito__resumen__info div h6 {
+.carrito__resumen__info {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    border-radius: 10px;
+    gap: 20px;
+    width: 572px;
+    height: 197px;
+    padding: 24px;
+    align-self: flex-end;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.resumen__info__cantidad,
+.resumen__info__subtotal,
+.resumen__info__envio,
+.resumen__info__total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resumen__info__cantidad h6,
+.resumen__info__subtotal h6,
+.resumen__info__envio h6 {
+    font-family: var(--base-font);
     font-size: 16px;
     font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
 }
 
-.carrito__resumen__info div p {
-    color: #747474;
+.resumen__info__cantidad p,
+.resumen__info__subtotal p,
+.resumen__info__envio p,
+.resumen__info__total p {
+    font-family: var(--base-font);
     font-size: 16px;
     font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(116, 116, 116, 1);
+}
+
+.resumen__info__total {
+    justify-content: space-between;
+    padding: 8px 0px 0px 0px;
+    border-top: solid 2px var(--primary-solid);
+}
+
+.resumen__info__total h6 {
+    font-family: var(--base-font);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.resumen__info__total p {
+    font-family: var(--base-font);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
 }
 
 .carrito__resumen__boton {
-    background-color: #FF3333;
-    color: #FFFFFF;
+    align-self: flex-end;
+    border: none;
+    color: white;
+    font-family: var(--base-font);
     font-size: 32px;
     font-weight: 700;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    background-color: var(--primary-solid);
     width: 572px;
     height: 68.66px;
+    text-align: center;
 }

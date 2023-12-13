@@ -38,6 +38,17 @@ const getAll2 = async () => {
     }
 }
 
+const getCollection = async () => {
+    try {
+        const [rows] = await conn.query('SELECT licence_id, licence_name, licence_description, licence_image FROM funko_test.licence;');
+        return rows;
+    } catch (error) {
+        return "No se pudo obtener la lista de licence.";
+    } finally {
+        conn.releaseConnection();
+    }
+}
+
 const crearItem = async (categoria, licencia, nombre, descripcion, sku, precio, stock, descuento, cuotas) => {
     try {
         const [itemNuevo] = await conn.query(`INSERT INTO funko_test.product (product_name, product_description, price, stock, discount, sku, dues, image_front, image_back, licence_id, category_id)
@@ -68,6 +79,7 @@ module.exports = {
     getAll,
     getById,
     getAll2,
+    getCollection,
     crearItem,
     eliminarItem
 }
