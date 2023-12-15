@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-<main class="carrito"> <!-- Inicio Main -->
+<main class="container carrito"> <!-- Inicio Main -->
 
     <h2 class="carrito__titulo">CARRITO DE COMPRAS</h2>
 
@@ -10,64 +10,67 @@
             <p>TOTAL</p>
         </div>
 
-        <div class="carrito__producto">
-            <div>
-                <img src="../../img/star-wars/baby-yoda-1.webp" alt="baby-yoda">
+        <section class="carrito__producto">
 
-                <div>
-                    <div>
-                        <h3 class="carrito__producto__nombre">BABY YODA BLUEBALL</h3>
-                        <h4 class="carrito__producto__franquicia">STAR WARS</h4>
-                    </div>
-
-                    <p class="carrito__producto__precio">precio: $1799,99</p>
-                </div>
+            <div class="carrito__item">
+                <picture class="item__img card-item__cover">
+                    <img class="card-item__img--front" src="../../img/star-wars/baby-yoda-1.webp" alt="Figura coleccionable Funko de Baby Yoda">
+                    <img class="card-item__img--back" src="../../img/star-wars/baby-yoda-box.webp" alt="Figura coleccionable Funko de Baby Yoda en caja">   
+                </picture>
+                <article class="carrito__informacion">
+                    <h3 class="carrito__name">BABY YODA BLUEBALL</h3>
+                    <p class="carrito__licence">STAR WARS</p>
+                    <p class="carrito__price">precio unitario: $ 1799,99.-</p>
+                </article>
             </div>
-
-            <div>
-                <p>1</p>
-                <button class="btn">+</button>
-                <button class="btn">-</button>
+        
+            <div class="item__cart">
+                <button id="subtract" class="item__quantity btn" type="button">-</button>
+                <input class="item__input" type="text" name="quantity" id="quantity" placeholder="0" value="2">
+                <button id="add" class="item__quantity btn" type="button">+</button>
             </div>
-
+        
             <div>
                 <p>$3599,98</p>
             </div>
-
+        
             <div>
-                <button>x</button>
+                <div class="btn btn--medium"><iconify-icon class="btn--carrito" icon="mdi:close-circle-outline"></iconify-icon></div>
             </div>
-        </div>
+        
+        </section>
 
-        <div class="carrito__producto">
-            <div>
-                <img src="../../img/pokemon/pidgeotto-1.webp" alt="pidgeotto">
+        <section class="carrito__producto">
 
-                <div>
-                    <div>
-                        <h3 class="carrito__producto__nombre">PIDGEOTTO</h3>
-                        <h4 class="carrito__producto__franquicia">POKEMON</h4>
-                    </div>
-
-                    <p class="carrito__producto__precio">Precio unitario: $1799,99</p>
-                </div>
+            <div class="carrito__item">
+                <picture class="item__img card-item__cover">
+                    <img class="card-item__img--front" src="../../img/pokemon/pidgeotto-1.webp" alt="Figura coleccionable Funko de Pidgeotto">
+                    <img class="card-item__img--back" src="../../img/pokemon/pidgeotto-box.webp" alt="Figura coleccionable Funko de Pidgeotto en caja"> 
+                </picture>
+                <article class="carrito__informacion">
+                    <h3 class="carrito__name">BABY YODA BLUEBALL</h3>
+                    <p class="carrito__licence">STAR WARS</p>
+                    <p class="carrito__price">precio unitario: $ 1799,99.-</p>
+                </article>
             </div>
-
-            <div>
-                <p>1</p>
-                <button class="btn">+</button>
-                <button class="btn">-</button>
+        
+            <div class="item__cart">
+                <button id="subtract" class="item__quantity btn" type="button">-</button>
+                <input class="item__input" type="text" name="quantity" id="quantity" placeholder="0" value="1">
+                <button id="add" class="item__quantity btn" type="button">+</button>
             </div>
-
+        
             <div>
                 <p>$1799,99</p>
             </div>
-
+        
             <div>
-                <button>x</button>
+                <div class="btn btn--medium"><iconify-icon class="btn--carrito" icon="mdi:close-circle-outline"></iconify-icon></div>
             </div>
-        </div>
-    </div>
+        
+        </section>
+
+        <br><br>
 
     <div class="carrito__resumen">
         <h2 class="carrito__resumen__titulo">RESUMEN</h2>
@@ -91,7 +94,7 @@
             </div>
         </div>
 
-        <button class="carrito__resumen__boton">IR A PAGAR</button>
+        <button class="btn carrito__resumen__boton">IR A PAGAR</button>
     </div>
 
 </main> <!-- Fin Main -->
